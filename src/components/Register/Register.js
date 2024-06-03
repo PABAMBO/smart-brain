@@ -23,7 +23,7 @@ constructor(props) {
   }
 
   onSubmitSignIn = () => {
-    fetch('http://localhost:3001/register', {
+    fetch('https://smart-brain-api-i5sj.onrender.com/register', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({

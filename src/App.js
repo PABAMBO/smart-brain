@@ -9,40 +9,6 @@ import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import ParticlesBg from 'particles-bg';
 import './App.css';
 
-// const clarifaiRequestOptions = (imageUrl) => {
-//   const PAT = '61e259ae468f44b699ea0e03644d5161';
-//   const USER_ID = 'pab2105';       
-//   const APP_ID = 'Test';
-
-//   // const MODEL_ID = 'face-detection';  
-//   const IMAGE_URL = imageUrl;
-
-//   const raw = JSON.stringify({
-//         "user_app_id": {
-//             "user_id": USER_ID,
-//             "app_id": APP_ID
-//         },
-//         "inputs": [
-//             {
-//                 "data": {
-//                     "image": {
-//                         "url": IMAGE_URL
-//                     }
-//                 }
-//             }
-//         ]
-//     });
-//     const requestOptions = {
-//         method: 'POST',
-//         headers: {
-//             'Accept': 'application/json',
-//             'Authorization': 'Key ' + PAT
-//         },
-//         body: raw
-//     };
-//     return requestOptions
-// }
-
 const initialState = {
   input: '',
   imageUrl: '',
@@ -101,7 +67,7 @@ class App extends Component {
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
 
-      fetch('http://localhost:3001/imageurl', {
+      fetch('https://smart-brain-api-i5sj.onrender.com/imageurl', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -111,7 +77,7 @@ class App extends Component {
       .then(response => response.json())
       .then(result => {
         if (result) {
-          fetch('http://localhost:3001/image', {
+          fetch('https://smart-brain-api-i5sj.onrender.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -172,3 +138,5 @@ class App extends Component {
 export default App;
 
 // https://neweralive.na/storage/images/2023/may/lloyd-sikeba.jpg
+
+// https://smart-brain-api-i5sj.onrender.com
