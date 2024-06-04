@@ -65,7 +65,7 @@ class App extends Component {
   }
 
   onButtonSubmit = () => {
-    this.setState({imageUrl: this.state.input});
+    this.setState({ imageUrl: this.state.input });
 
       fetch('https://smart-brain-api-i5sj.onrender.com/imageurl', {
             method: 'post',
@@ -136,7 +136,3 @@ class App extends Component {
 }
 
 export default App;
-
-// https://neweralive.na/storage/images/2023/may/lloyd-sikeba.jpg
-
-// https://smart-brain-api-i5sj.onrender.com
