@@ -1,6 +1,6 @@
 {
   "name": "smart-brain",
-  "homepage": "https://PABAMBO.github.io/smart-brain",
+  // "homepage": "https://PABAMBO.github.io/smart-brain",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,7 +18,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    // "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -42,7 +42,7 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "gh-pages": "^6.1.1"
-  }
+  // "devDependencies": {
+  //   "gh-pages": "^6.1.1"
+  // }
 }
